@@ -1,0 +1,14 @@
+#Set Memory Limit
+php_value memory_limit 2000M
+
+#Options -Indexes
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+RewriteBase /rockdrill/gestion-de-almacenes/
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ $1.php
+</IfModule>
+
